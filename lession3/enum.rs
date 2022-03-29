@@ -41,6 +41,23 @@ impl VeryVerboseEnumOfThingsToDoWidthNumbers {
   }
 }
 
+enum Status {
+  Rich,
+  Poor
+}
+
+enum Work {
+  Civilian,
+  Soldier
+}
+
+// 赋值写法
+enum Color {
+  Red = 0xff0000,
+  Green = 0x00ff00,
+  Blue = 0x0000ff
+}
+
 fn main() {
   println!("enum");
 
@@ -69,4 +86,24 @@ fn main() {
 
   println!("{}", add.run(1, 2));
   println!("{}", subtract.run(3, 2));
+
+  // 使用use
+  // 显式的use枚举内的属性，可以直接在代码里使用，类似模块引入
+  use Status::{Poor, Rich};
+  use Work::*;
+
+  // 等价于 Status::Poor
+  let status = Poor;
+  // 等价于Work::Cirvilian
+  let work = Civilian
+
+  match status {
+    Rich => println!("The rich hava lots of money!"),
+    Poor => println!("The poor have on money...")
+  }
+
+  match work {
+    Civilian => println!("Civilians works"),
+    Soldier => println!("Soldiers fight!")
+  }
 }
