@@ -17,4 +17,30 @@ fn main() {
       break;
     }
   }
+
+  // 嵌套循环
+  'outer: loop {
+    println!("Entered the outer loop");
+
+    'inner: loop {
+      // 这只是中断内部的循环
+      // break;
+
+      // 通过标签break
+      break 'outer;
+    }
+
+    println!("This point will never be reached");
+  }
+  println!("Exited the outer loop");
+
+  // loop 返回值
+  let mut counter = 0;
+  let result = loop {
+    counter += 1;
+    if counter == 10 {
+      break counter * 2;
+    }
+  };
+  assert_eq!(result, 20);
 }
