@@ -140,4 +140,35 @@ fn main() {
     (x, _) if x % 2 == 1 => println!("The first one id ood"),
     _ => println!("No correlation...")
   }
+
+  println!("-------------绑定---------------");
+  // 在match中，若间接地访问一个变量，则不经过重新绑定就无法在分支中再使用它。
+  // match提供了@符号来绑定变量到名称
+  println!("{}", age());
+  match age() {
+    0 => println!("I have not celebrated my first birthday yet"),
+    n @ 1..=12 => println!("Im a child of age {:?}", n),
+    n @ 13..=19 => println!("Im a teen of age {:?}", n),
+    n => println!("Im an old person of age {:?}", n)
+  }
+  // 也可以使用绑定来解构enum变体
+  match some_number() {
+    Some(n @ 42) => println!("answer as: {}", n),
+    Some(n) => println!("answer: {}", n),
+    _ => ()
+  }
+  match some_number() {
+    Some(n) if n == 42 => println!("answer as: {}", n),
+    Some(n) => println!("answer: {}", n),
+    _ => ()
+  }
+
+}
+
+fn age() -> u32 {
+  19
+}
+
+fn some_number() -> Option<u32> {
+  Some(42)
 }
