@@ -107,4 +107,37 @@ fn main() {
       println!("value: {:?}", m);
     }
   }
+
+  println!("-------------解构结构体---------------");
+  struct Foo {
+    x: (u32, u32),
+    y: u32
+  }
+  let foo = Foo {
+    x: (1, 2),
+    y: 3
+  };
+  let Foo {x: (a, b), y} = foo;
+  println!("{}, {}, {}", a, b, y);
+  // 可以解构结构体并重命名变量，成员顺序并不重要
+  let Foo {
+    x: i,
+    y: j
+  } = foo;
+  println!("{:?}, {}", i, j);
+
+  // 也可以忽略某些变量
+  let Foo { y, ..} = foo;
+  println!("y: {}", y);
+
+  println!("-------------卫语句---------------");
+  let pair = (4, 2);
+  println!("Tell me about {:?}", pair);
+  match pair {
+    // if 条件部分是一个卫语句
+    (x, y) if x == y => println!("These are twins"),
+    (x, y) if x + y == 0 => println!("Antimatter, kaboom!"),
+    (x, _) if x % 2 == 1 => println!("The first one id ood"),
+    _ => println!("No correlation...")
+  }
 }
