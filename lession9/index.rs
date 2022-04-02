@@ -35,6 +35,6 @@ fn fizzbuzz(n: u32) -> () {
 
 fn fizzbuzz_to(n: u32) {
   for n in 1..=n {
-    fizzbuzz(n); // 当函数返回 () 时，函数签名可以省略范湖类型
+    fizzbuzz(n); // 当函数返回 () 时，函数签名可以省略返回类型
   }
 }
