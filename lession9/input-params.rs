@@ -13,12 +13,20 @@
 // 这是因为如果能以移动的方式捕获变量，则闭包也有能力使用其他方式借用变量。
 // 反过来则不行：如果参数的类型说明为Fn，那么不允许闭包通过&mut T 或 T 捕获变量。
 
-fn apply<F>(f: F) where F: FnOnce() { // 闭包没有输入值和返回值
+// fn apply<F>(f: F) where F: FnOnce() { // 闭包没有输入值和返回值
+//   f();
+// }
+
+fn apply<F: FnOnce()>(f: F) { // 闭包没有输入值和返回值
   f();
 }
 
 // 闭包处理一个i32，并返回一个i32
-fn apply_to_3<F>(f: F) -> i32 where F: Fn(i32) -> i32 {
+// fn apply_to_3<F>(f: F) -> i32 where F: Fn(i32) -> i32 {
+//   f(3)
+// }
+
+fn apply_to_3<F: Fn(i32) -> i32>(f: F) -> i32 {
   f(3)
 }
 
