@@ -1,0 +1,11 @@
+/Users/didi/Documents/code/rust-workspace/rust-by-example/lession12/foo/target/rls/debug/deps/os_str_bytes-c1b25244072a851f.rmeta: /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/lib.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/common/mod.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/util.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/common/raw.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/iter.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/pattern.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/raw_str.rs
+
+/Users/didi/Documents/code/rust-workspace/rust-by-example/lession12/foo/target/rls/debug/deps/os_str_bytes-c1b25244072a851f.d: /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/lib.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/common/mod.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/util.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/common/raw.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/iter.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/pattern.rs /Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/raw_str.rs
+
+/Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/lib.rs:
+/Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/common/mod.rs:
+/Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/util.rs:
+/Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/common/raw.rs:
+/Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/iter.rs:
+/Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/pattern.rs:
+/Users/didi/.cargo/registry/src/github.com-1ecc6299db9ec823/os_str_bytes-6.0.0/src/raw_str.rs:
