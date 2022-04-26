@@ -59,11 +59,32 @@ impl Animal for Sheep {
     }
 }
 
+struct Dog {
+    naked: bool,
+    name: &'static str,
+}
+
+impl Animal for Dog {
+    fn new(name: &'static str) -> Dog {
+        Dog { name, naked: false }
+    }
+    fn name(&self) -> &'static str {
+        self.name
+    }
+    fn noise(&self) -> &'static str {
+        self.name
+    }
+}
+
 fn main() {
-    // let mut dolly: Sheep = Animal::new("Dolly");
-    let mut dolly = Sheep::new("kim");
+    let mut dolly: Sheep = Animal::new("Dolly");
+    // let mut dolly = Sheep::new("kim");
 
     dolly.talk();
     dolly.shear();
     dolly.talk();
+
+    let mut dog: Dog = Animal::new("Dog");
+    dog.talk();
+    println!("{}", dog.name());
 }
