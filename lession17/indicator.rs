@@ -39,5 +39,5 @@ fn main() {
 // - pat  模式
 // - path
 // - stmt 语句
-// - tt  标记树
+// - tt（token tree，标记树）指示符表示运算符和标记。
 // - ty 类型
