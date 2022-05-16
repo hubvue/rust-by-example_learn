@@ -27,6 +27,7 @@ pub fn run() {
 // stdout和stderr句柄，从而可以通过管道与所代表的进程交互
 
 static PANGRAM: &'static str = "the quick brown fox jumped over the lazy dog\n";
+#[allow(dead_code)]
 pub fn run_pipe() {
     // 启动wc命令
     let process = match Command::new("wc")
@@ -54,4 +55,14 @@ pub fn run_pipe() {
         Err(why) => panic!("could not read wc stdout: {:?}", why),
         Ok(_) => println!("wc responded with: {}", s),
     }
+}
+
+// 如果需要等待一个process::Child
+// 完成，就需要调用Child::wait，这会返回一个process::ExitStatus
+#[allow(dead_code)]
+pub fn run_wait() {
+    let mut child = Command::new("sleep").arg("5").spawn().unwrap();
+    let result = child.wait().unwrap();
+    println!("result: {:?}", result);
+    // println!("test");
 }
